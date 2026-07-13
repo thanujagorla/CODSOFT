@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<header>
+    <h1>Online Quiz Maker</h1>
+</header>
+
+<div class="container">
+
+    <!-- Home -->
+    <div id="home" class="card">
+        <h2>Welcome!</h2>
+        <p>Create your own quiz or take an existing quiz.</p>
+
+        <button onclick="showCreate()">Create Quiz</button>
+        <button onclick="showList()">Take Quiz</button>
+    </div>
+
+    <!-- Create Quiz -->
+    <div id="createQuiz" class="card hidden">
+
+        <h2>Create Quiz</h2>
+
+        <input type="text" id="question" placeholder="Enter Question">
+
+        <input type="text" id="option1" placeholder="Option 1">
+
+        <input type="text" id="option2" placeholder="Option 2">
+
+        <input type="text" id="option3" placeholder="Option 3">
+
+        <input type="text" id="option4" placeholder="Option 4">
+
+        <select id="answer">
+            <option value="0">Correct Answer - Option 1</option>
+            <option value="1">Correct Answer - Option 2</option>
+            <option value="2">Correct Answer - Option 3</option>
+            <option value="3">Correct Answer - Option 4</option>
+        </select>
+
+        <button onclick="addQuestion()">Add Question</button>
+
+        <button onclick="saveQuiz()">Save Quiz</button>
+
+        <button onclick="goHome()">Home</button>
+
+    </div>
+
+    <!-- Quiz List -->
+    <div id="quizList" class="card hidden">
+
+        <h2>Available Quiz</h2>
+
+        <div id="list"></div>
+
+        <button onclick="goHome()">Home</button>
+
+    </div>
+
+    <!-- Quiz -->
+    <div id="quizBox" class="card hidden">
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <h2 id="qText"></h2>
+
+        <div id="options"></div>
+
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="card hidden">
+
+        <h2>Quiz Completed!</h2>
+
+        <h3 id="score"></h3>
+
+        <div id="answers"></div>
+
+        <button onclick="goHome()">Home</button>
+
+    </div>
+
+</div>
+
+<script src="script1.js"></script>
+
+</body>
+</html>
